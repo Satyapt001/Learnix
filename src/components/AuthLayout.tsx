@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import heroImage from "@/assets/hero-learning.jpg";
 import { GraduationCap } from "lucide-react";
+import PageNavigation from "./PageNavigation";
 
 interface AuthLayoutProps {
   children: ReactNode;
@@ -13,11 +14,14 @@ const AuthLayout = ({ children, title = "Welcome to Learnix", subtitle = "Your s
     <div className="min-h-screen flex">
       {/* Left Panel - Hero Section */}
       <div className="hidden lg:flex lg:w-1/2 gradient-hero p-12 flex-col justify-between text-white">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-            <GraduationCap className="w-6 h-6" />
+        <div className="space-y-6">
+          <PageNavigation variant="light" />
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+              <GraduationCap className="w-6 h-6" />
+            </div>
+            <span className="text-2xl font-semibold">Learnix</span>
           </div>
-          <span className="text-2xl font-semibold">Learnix</span>
         </div>
 
         <div className="space-y-6">
@@ -42,7 +46,10 @@ const AuthLayout = ({ children, title = "Welcome to Learnix", subtitle = "Your s
 
       {/* Right Panel - Auth Form */}
       <div className="flex-1 flex items-center justify-center p-6 lg:p-12 bg-background">
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md space-y-6">
+          <div className="lg:hidden">
+            <PageNavigation />
+          </div>
           {children}
         </div>
       </div>

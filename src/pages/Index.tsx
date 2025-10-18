@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Brain, Users, Target, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import PageNavigation from "@/components/PageNavigation";
 
 const Index = () => {
   return (
@@ -8,11 +9,14 @@ const Index = () => {
       {/* Header */}
       <header className="border-b">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 text-white" />
+          <div className="flex items-center gap-6">
+            <PageNavigation />
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
+                <GraduationCap className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-2xl font-semibold">Learnix</span>
             </div>
-            <span className="text-2xl font-semibold">Learnix</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
