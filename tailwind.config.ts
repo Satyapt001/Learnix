@@ -22,7 +22,11 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
+        student: "hsl(var(--student))",
+        teacher: "hsl(var(--teacher))",
+        guest: "hsl(var(--guest))",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -57,6 +61,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
