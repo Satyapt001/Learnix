@@ -13,8 +13,8 @@ const AuthLayout = ({ children, title = "Welcome to Learnix", subtitle = "Your s
   return (
     <div className="min-h-screen flex">
       {/* Left Panel - Hero Section */}
-      <div className="hidden lg:flex lg:w-1/2 gradient-hero p-12 flex-col justify-between text-white">
-        <div className="space-y-6">
+      <div className="hidden lg:flex lg:w-1/2 gradient-hero p-8 xl:p-12 flex-col justify-between text-white">
+        <div className="space-y-4">
           <PageNavigation variant="light" />
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
@@ -24,13 +24,13 @@ const AuthLayout = ({ children, title = "Welcome to Learnix", subtitle = "Your s
           </div>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6 flex-1 flex flex-col justify-center py-8">
           <div className="space-y-3">
-            <h1 className="text-5xl font-bold leading-tight">{title}</h1>
-            <p className="text-xl text-white/90">{subtitle}</p>
+            <h1 className="text-4xl xl:text-5xl font-bold leading-tight">{title}</h1>
+            <p className="text-lg xl:text-xl text-white/90">{subtitle}</p>
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <div className="rounded-2xl overflow-hidden shadow-2xl max-w-lg">
             <img 
               src={heroImage} 
               alt="Students learning together" 
@@ -45,9 +45,9 @@ const AuthLayout = ({ children, title = "Welcome to Learnix", subtitle = "Your s
       </div>
 
       {/* Right Panel - Auth Form */}
-      <div className="flex-1 flex items-center justify-center p-6 lg:p-12 bg-background">
+      <div className="flex-1 flex items-center justify-center p-6 lg:p-8 xl:p-12 bg-background">
         <div className="w-full max-w-md space-y-6">
-          <div className="lg:hidden">
+          <div className="lg:hidden mb-4">
             <PageNavigation />
           </div>
           {children}
