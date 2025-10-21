@@ -1,32 +1,36 @@
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Brain, Users, Target, Sparkles } from "lucide-react";
+import { GraduationCap, Brain, Users, Target, Sparkles, Menu, User, BookOpen, FileText, ClipboardList, MessageSquare, Video, LogOut } from "lucide-react";
 import { Link } from "react-router-dom";
-import PageNavigation from "@/components/PageNavigation";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b">
+      <header className="border-b bg-background sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <PageNavigation />
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-semibold">Learnix</span>
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
+              <GraduationCap className="w-6 h-6 text-white" />
             </div>
+            <span className="text-2xl font-semibold">Learnix</span>
           </div>
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Features
+            <a href="#books" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Books
             </a>
-            <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              About
-            </a>
-            <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Contact
+            <a href="#courses" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Courses
             </a>
             <Link to="/login">
               <Button variant="outline">Sign In</Button>
@@ -34,7 +38,151 @@ const Index = () => {
             <Link to="/signup">
               <Button>Get Started</Button>
             </Link>
+            
+            {/* Hamburger Menu */}
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="w-5 h-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <SheetTitle className="flex items-center gap-2">
+                    <User className="w-5 h-5" />
+                    Menu
+                  </SheetTitle>
+                </SheetHeader>
+                <div className="mt-6 space-y-1">
+                  <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                    <a href="#profile">
+                      <User className="w-4 h-4" />
+                      User Profile
+                    </a>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                    <a href="#notes">
+                      <FileText className="w-4 h-4" />
+                      Notes
+                    </a>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                    <a href="#mock-test">
+                      <ClipboardList className="w-4 h-4" />
+                      Mock Test
+                    </a>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                    <a href="#mentorship">
+                      <Users className="w-4 h-4" />
+                      1:1 Mentorship
+                    </a>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                    <a href="#quizzes">
+                      <Brain className="w-4 h-4" />
+                      Quizzes
+                    </a>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                    <a href="#webinars">
+                      <Video className="w-4 h-4" />
+                      Webinars
+                    </a>
+                  </Button>
+                  <Separator className="my-4" />
+                  <Button variant="ghost" className="w-full justify-start gap-3 text-destructive hover:text-destructive" asChild>
+                    <a href="#logout">
+                      <LogOut className="w-4 h-4" />
+                      Logout
+                    </a>
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
           </nav>
+
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu className="w-5 h-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle className="flex items-center gap-2">
+                  <GraduationCap className="w-5 h-5" />
+                  Learnix
+                </SheetTitle>
+              </SheetHeader>
+              <div className="mt-6 space-y-1">
+                <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                  <a href="#books">
+                    <BookOpen className="w-4 h-4" />
+                    Books
+                  </a>
+                </Button>
+                <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                  <a href="#courses">
+                    <Target className="w-4 h-4" />
+                    Courses
+                  </a>
+                </Button>
+                <Separator className="my-4" />
+                <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                  <a href="#profile">
+                    <User className="w-4 h-4" />
+                    User Profile
+                  </a>
+                </Button>
+                <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                  <a href="#notes">
+                    <FileText className="w-4 h-4" />
+                    Notes
+                  </a>
+                </Button>
+                <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                  <a href="#mock-test">
+                    <ClipboardList className="w-4 h-4" />
+                    Mock Test
+                  </a>
+                </Button>
+                <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                  <a href="#mentorship">
+                    <Users className="w-4 h-4" />
+                    1:1 Mentorship
+                  </a>
+                </Button>
+                <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                  <a href="#quizzes">
+                    <Brain className="w-4 h-4" />
+                    Quizzes
+                  </a>
+                </Button>
+                <Button variant="ghost" className="w-full justify-start gap-3" asChild>
+                  <a href="#webinars">
+                    <Video className="w-4 h-4" />
+                    Webinars
+                  </a>
+                </Button>
+                <Separator className="my-4" />
+                <Link to="/login" className="block">
+                  <Button variant="outline" className="w-full">Sign In</Button>
+                </Link>
+                <Link to="/signup" className="block">
+                  <Button className="w-full">Get Started</Button>
+                </Link>
+                <Separator className="my-4" />
+                <Button variant="ghost" className="w-full justify-start gap-3 text-destructive hover:text-destructive" asChild>
+                  <a href="#logout">
+                    <LogOut className="w-4 h-4" />
+                    Logout
+                  </a>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </header>
 
