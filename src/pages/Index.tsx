@@ -54,48 +54,44 @@ const Index = () => {
                   </SheetTitle>
                 </SheetHeader>
                 <div className="mt-6 space-y-1">
-                  <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                    <a href="#profile">
-                      <User className="w-4 h-4" />
-                      User Profile
-                    </a>
+                  <Button variant="ghost" className="w-full justify-start gap-3">
+                    <User className="w-4 h-4" />
+                    User Profile
                   </Button>
                   <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                    <a href="#notes">
-                      <FileText className="w-4 h-4" />
+                    <Link to="/notes">
+                      <FileText className="w-4 h-4 mr-3" />
                       Notes
-                    </a>
+                    </Link>
                   </Button>
                   <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                    <a href="#mock-test">
-                      <ClipboardList className="w-4 h-4" />
+                    <Link to="/mock-tests">
+                      <ClipboardList className="w-4 h-4 mr-3" />
                       Mock Test
-                    </a>
+                    </Link>
                   </Button>
                   <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                    <a href="#mentorship">
-                      <Users className="w-4 h-4" />
+                    <Link to="/mentorship">
+                      <Users className="w-4 h-4 mr-3" />
                       1:1 Mentorship
-                    </a>
+                    </Link>
                   </Button>
                   <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                    <a href="#quizzes">
-                      <Brain className="w-4 h-4" />
+                    <Link to="/quizzes">
+                      <Brain className="w-4 h-4 mr-3" />
                       Quizzes
-                    </a>
+                    </Link>
                   </Button>
                   <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                    <a href="#webinars">
-                      <Video className="w-4 h-4" />
+                    <Link to="/webinars">
+                      <Video className="w-4 h-4 mr-3" />
                       Webinars
-                    </a>
+                    </Link>
                   </Button>
                   <Separator className="my-4" />
-                  <Button variant="ghost" className="w-full justify-start gap-3 text-destructive hover:text-destructive" asChild>
-                    <a href="#logout">
-                      <LogOut className="w-4 h-4" />
-                      Logout
-                    </a>
+                  <Button variant="ghost" className="w-full justify-start gap-3 text-destructive hover:text-destructive">
+                    <LogOut className="w-4 h-4" />
+                    Logout
                   </Button>
                 </div>
               </SheetContent>
@@ -118,53 +114,51 @@ const Index = () => {
               </SheetHeader>
               <div className="mt-6 space-y-1">
                 <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                  <a href="#books">
-                    <BookOpen className="w-4 h-4" />
+                  <Link to="/books">
+                    <BookOpen className="w-4 h-4 mr-3" />
                     Books
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                  <a href="#courses">
-                    <Target className="w-4 h-4" />
+                  <Link to="/courses">
+                    <Target className="w-4 h-4 mr-3" />
                     Courses
-                  </a>
+                  </Link>
                 </Button>
                 <Separator className="my-4" />
-                <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                  <a href="#profile">
-                    <User className="w-4 h-4" />
-                    User Profile
-                  </a>
+                <Button variant="ghost" className="w-full justify-start gap-3">
+                  <User className="w-4 h-4" />
+                  User Profile
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                  <a href="#notes">
-                    <FileText className="w-4 h-4" />
+                  <Link to="/notes">
+                    <FileText className="w-4 h-4 mr-3" />
                     Notes
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                  <a href="#mock-test">
-                    <ClipboardList className="w-4 h-4" />
+                  <Link to="/mock-tests">
+                    <ClipboardList className="w-4 h-4 mr-3" />
                     Mock Test
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                  <a href="#mentorship">
-                    <Users className="w-4 h-4" />
+                  <Link to="/mentorship">
+                    <Users className="w-4 h-4 mr-3" />
                     1:1 Mentorship
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                  <a href="#quizzes">
-                    <Brain className="w-4 h-4" />
+                  <Link to="/quizzes">
+                    <Brain className="w-4 h-4 mr-3" />
                     Quizzes
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="ghost" className="w-full justify-start gap-3" asChild>
-                  <a href="#webinars">
-                    <Video className="w-4 h-4" />
+                  <Link to="/webinars">
+                    <Video className="w-4 h-4 mr-3" />
                     Webinars
-                  </a>
+                  </Link>
                 </Button>
                 <Separator className="my-4" />
                 <Link to="/login" className="block">
