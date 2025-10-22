@@ -139,7 +139,6 @@ const LMSNavigation = ({ userType = "student" }: LMSNavigationProps) => {
                       {item.path ? (
                         <Link to={item.path}>
                           <Button variant="ghost" className="w-full justify-start" size="sm">
-                            <item.icon className="w-4 h-4 mr-2" />
                             {item.name}
                           </Button>
                         </Link>
@@ -150,7 +149,6 @@ const LMSNavigation = ({ userType = "student" }: LMSNavigationProps) => {
                           size="sm"
                           onClick={item.action}
                         >
-                          <item.icon className="w-4 h-4 mr-2" />
                           {item.name}
                         </Button>
                       )}

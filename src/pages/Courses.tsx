@@ -1,10 +1,12 @@
 import { useState } from "react";
 import LMSNavigation from "@/components/LMSNavigation";
 import AIChatbot from "@/components/AIChatbot";
+import { CourseVideoPlayer } from "@/components/CourseVideoPlayer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Search, GraduationCap } from "lucide-react";
 import { toast } from "sonner";
 
@@ -80,6 +82,13 @@ const Courses = () => {
       <LMSNavigation userType="student" />
       
       <main className="container mx-auto px-4 py-8">
+        <Tabs defaultValue="browse" className="w-full">
+          <TabsList className="mb-8">
+            <TabsTrigger value="browse">Browse Courses</TabsTrigger>
+            <TabsTrigger value="learning">My Learning</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="browse" className="space-y-8">
         {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-foreground mb-2">Courses</h1>
@@ -194,6 +203,17 @@ const Courses = () => {
             ))}
           </div>
         </div>
+          </TabsContent>
+
+          <TabsContent value="learning" className="space-y-8">
+            <div className="mb-8">
+              <h1 className="text-4xl font-bold text-foreground mb-2">My Current Course</h1>
+              <p className="text-muted-foreground">Continue your learning journey</p>
+            </div>
+            
+            <CourseVideoPlayer />
+          </TabsContent>
+        </Tabs>
       </main>
 
       <AIChatbot />
