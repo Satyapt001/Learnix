@@ -42,7 +42,7 @@ const AIChatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-6 left-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50">
       {isOpen ? (
         <Card className="w-80 sm:w-96 h-[500px] flex flex-col shadow-xl">
           {/* Header */}

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Brain, Users, Target, Sparkles, Menu, User, BookOpen, FileText, ClipboardList, MessageSquare, Video, LogOut } from "lucide-react";
 import { Link } from "react-router-dom";
+import AIChatbot from "@/components/AIChatbot";
 import {
   Sheet,
   SheetContent,
@@ -26,12 +27,12 @@ const Index = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#books" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/books" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Books
-            </a>
-            <a href="#courses" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/courses" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Courses
-            </a>
+            </Link>
             <Link to="/login">
               <Button variant="outline">Sign In</Button>
             </Link>
@@ -294,6 +295,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <AIChatbot />
     </div>
   );
 };
