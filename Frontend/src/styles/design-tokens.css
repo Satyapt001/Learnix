@@ -1,0 +1,134 @@
+/* Design Tokens - Consistent UI */
+:root {
+    /* Primary */
+    --primary: #6366F1;
+    --primary-hover: #4F46E5;
+    --primary-light: #818CF8;
+    --primary-soft: #E0E7FF;
+
+    /* Brand */
+    --brand: #6366F1;
+    --brand-dark: #4F46E5;
+
+    /* Text on Primary */
+    --on-primary: #FFFFFF;
+
+    /* Light mode */
+    --background: #F6F7F9;
+    --foreground: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --surface-hover: #F3F4F6;
+
+    --text-primary: #111827;
+    --text-secondary: #4B5563;
+    --text-tertiary: #9CA3AF;
+
+    --border-color: #E5E7EB;
+    --input-bg: #FFFFFF;
+    --input-border: #D1D5DB;
+
+    /* Status */
+    --success: #10B981;
+    --warning: #F59E0B;
+    --error: #EF4444;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+    --shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 12px 20px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    --shadow-xl: 0 25px 35px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
+
+    --transition-base: 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    /* Radius - Rounder corners for modern feel */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-full: 9999px;
+}
+
+.dark {
+    /* Dark mode */
+    --background: #0C0F14;
+    --foreground: #111522;
+    --card-bg: #151926;
+    --surface-hover: #1F2433;
+
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-tertiary: #64748B;
+
+    --border-color: #1F2433;
+    --input-bg: #111522;
+    --input-border: #2D3446;
+
+    --primary: #6366F1;
+    --primary-hover: #818CF8;
+    --primary-light: #A5B4FC;
+    --primary-soft: #312E81;
+
+    --brand: #6366F1;
+    --brand-dark: #4F46E5;
+
+    --on-primary: #FFFFFF;
+}
+
+/* Utility classes */
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-primary-hover:hover {
+    background-color: var(--primary-hover);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.border-color {
+    border-color: var(--border-color);
+}
+
+.transition-base {
+    transition: var(--transition-base);
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dark .glass {
+    background: rgba(17, 21, 34, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
